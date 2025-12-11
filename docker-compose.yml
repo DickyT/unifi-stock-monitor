@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  findmy:
+    image: dickyt/find-my-device-puppeteer:latest
+    container_name: findmy-server
+    # No `ports:` -> not exposed outside the compose network
+
+  unifi-stock-monitor:
+    image: dickyt/unifi-stock-monitor:latest
+    container_name: unifi-stock-monitor
+    depends_on:
+      - findmy
+    environment:
+      # Override only the URL so it talks to the Docker service instead of localhost
+      FINDMY_URL: http://findmy:1919/findmy

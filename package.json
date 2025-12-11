@@ -1,0 +1,23 @@
+{
+  "name": "unifi-stock-monitor",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/DickyT/unifi-stock-monitor#readme",
+  "bugs": {
+    "url": "https://github.com/DickyT/unifi-stock-monitor/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DickyT/unifi-stock-monitor.git"
+  },
+  "license": "WTFPL",
+  "author": "DickyT",
+  "type": "commonjs",
+  "main": "index.ts",
+  "scripts": {
+    "start": "tsx index.ts"
+  },
+  "dependencies": {
+    "tsx": "^4.21.0"
+  }
+}
